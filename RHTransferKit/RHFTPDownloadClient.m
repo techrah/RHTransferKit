@@ -131,6 +131,14 @@
 	CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPUsePassiveMode, kCFBooleanTrue);
 	CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPFileTransferOffset, (CFNumberRef)[NSNumber numberWithUnsignedLongLong:totalBytesTransferred]);
 	
+	if (self.username) {
+		CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPUserName, self.username);
+	}
+	
+	if (self.password) {
+		CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPPassword, self.password);
+	}
+	
 	[self.networkStream open];
 	
 	if ([delegate respondsToSelector:@selector(transferClientDidBeginConnecting:)])

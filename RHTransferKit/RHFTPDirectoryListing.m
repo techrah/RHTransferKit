@@ -139,7 +139,16 @@
 	
 	CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPFetchResourceInfo, kCFBooleanFalse);
 	CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPAttemptPersistentConnection, kCFBooleanFalse);
-	CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPUsePassiveMode, kCFBooleanTrue);	
+	CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPUsePassiveMode, kCFBooleanTrue);
+	
+	if (self.downloadItem.username) {
+		CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPUserName, self.downloadItem.username);
+	}
+	
+	if (self.downloadItem.password) {
+		CFReadStreamSetProperty(ftpStream, kCFStreamPropertyFTPPassword, self.downloadItem.password);
+	}
+	
 	[self.networkStream open];
 	
 	// Have to release ftpStream to balance out the create.  self.networkStream 
