@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = "RHTransferKit"
-  s.version          = "1.0.0"
-  s.summary          = "HTTP downloading with redirect and resume, HTTP uploading, FTP downloading with resume."
+  s.version          = "1.0.1"
+  s.summary          = "WebDAV downloading/uploading, FTP downloading."
   s.description      = <<-DESC
-  Based on WTClient, a WebDAV client, the http download class is capable of redirecting HTTP 301s, as well as pausing and resuming.
-  The FTP Client is based solely on Core Foundation streams.
+  Based on WTClient, a WebDAV client, the RHDownload class is capable of redirecting HTTP 301s, as well as pausing and resuming.
+  The FTP Client is based solely on Core Foundation streams and is capable of resuming downloads.
                        DESC
   s.homepage         = "https://github.com/ryanhomer/RHTransferKit"
   s.license          = 'MIT'
