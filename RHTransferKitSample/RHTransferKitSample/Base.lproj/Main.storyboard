@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="http:// or ftp://" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1C-2G-JU8">
+                                <rect key="frame" x="105" y="47" width="479" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgG-53-7Cv">
+                                <rect key="frame" x="22" y="51" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Nb3-bx-POY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TcQ-ad-ekH">
+                                <rect key="frame" x="105" y="80" width="479" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSv-Ul-HQV">
+                                <rect key="frame" x="22" y="83" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="hRc-Cp-kD2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQ6-qf-3vU">
+                                <rect key="frame" x="105" y="113" width="479" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPr-Hl-iMv">
+                                <rect key="frame" x="22" y="117" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="QOo-xX-1Bh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyA-GU-9Ww">
+                                <rect key="frame" x="266" y="151" width="69" height="30"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lmF-Ke-wyx"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TEV-gC-drB">
+                                <rect key="frame" x="193" y="233" width="214" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpD-TF-QIB">
+                                <rect key="frame" x="146" y="243" width="309" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mPr-Hl-iMv" firstAttribute="width" secondItem="SgG-53-7Cv" secondAttribute="width" id="0c5-Vo-Mpc"/>
+                            <constraint firstItem="mPr-Hl-iMv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="6" id="6Dh-me-HFU"/>
+                            <constraint firstItem="ZyA-GU-9Ww" firstAttribute="top" secondItem="EQ6-qf-3vU" secondAttribute="bottom" constant="8" id="6Us-dH-tMt"/>
+                            <constraint firstItem="j1C-2G-JU8" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="76u-4o-05L"/>
+                            <constraint firstItem="NpD-TF-QIB" firstAttribute="top" secondItem="TEV-gC-drB" secondAttribute="bottom" constant="8" id="8NP-4i-nEM"/>
+                            <constraint firstItem="mPr-Hl-iMv" firstAttribute="centerY" secondItem="EQ6-qf-3vU" secondAttribute="centerY" id="IYY-k8-j8k"/>
+                            <constraint firstItem="TcQ-ad-ekH" firstAttribute="leading" secondItem="pSv-Ul-HQV" secondAttribute="trailing" constant="8" id="Kc4-zX-s0D"/>
+                            <constraint firstItem="pSv-Ul-HQV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="6" id="Qvm-Yr-6GY"/>
+                            <constraint firstItem="SgG-53-7Cv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="6" id="U8Z-q5-Xey"/>
+                            <constraint firstAttribute="centerX" secondItem="TEV-gC-drB" secondAttribute="centerX" id="ZJ6-6p-38A"/>
+                            <constraint firstItem="j1C-2G-JU8" firstAttribute="centerY" secondItem="SgG-53-7Cv" secondAttribute="centerY" id="azj-iB-Zef"/>
+                            <constraint firstItem="SgG-53-7Cv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="31" id="bAY-Oi-d2t"/>
+                            <constraint firstItem="TEV-gC-drB" firstAttribute="top" secondItem="ZyA-GU-9Ww" secondAttribute="bottom" constant="52" id="eC3-Vp-wAg"/>
+                            <constraint firstItem="pSv-Ul-HQV" firstAttribute="top" secondItem="SgG-53-7Cv" secondAttribute="bottom" constant="11" id="hVS-NN-Jmr"/>
+                            <constraint firstItem="j1C-2G-JU8" firstAttribute="leading" secondItem="SgG-53-7Cv" secondAttribute="trailing" constant="8" id="keO-4w-8EE"/>
+                            <constraint firstItem="mPr-Hl-iMv" firstAttribute="top" secondItem="pSv-Ul-HQV" secondAttribute="bottom" constant="13" id="neS-rd-IAV"/>
+                            <constraint firstAttribute="centerX" secondItem="NpD-TF-QIB" secondAttribute="centerX" id="pT1-6b-8cF"/>
+                            <constraint firstAttribute="centerX" secondItem="ZyA-GU-9Ww" secondAttribute="centerX" id="rNI-tn-AZa"/>
+                            <constraint firstItem="TcQ-ad-ekH" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="sod-KL-vM4"/>
+                            <constraint firstItem="mPr-Hl-iMv" firstAttribute="width" secondItem="pSv-Ul-HQV" secondAttribute="width" id="sor-mv-HfP"/>
+                            <constraint firstItem="EQ6-qf-3vU" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="tcs-ho-6sw"/>
+                            <constraint firstItem="TcQ-ad-ekH" firstAttribute="centerY" secondItem="pSv-Ul-HQV" secondAttribute="centerY" id="x8E-HU-zdz"/>
+                            <constraint firstItem="EQ6-qf-3vU" firstAttribute="leading" secondItem="mPr-Hl-iMv" secondAttribute="trailing" constant="8" id="yBr-zl-tNc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="downloadProgress" destination="TEV-gC-drB" id="Mql-pr-LRk"/>
+                        <outlet property="downloadStatus" destination="NpD-TF-QIB" id="Ki7-ZF-kel"/>
+                        <outlet property="password" destination="EQ6-qf-3vU" id="Ak7-iB-QgO"/>
+                        <outlet property="urlTextField" destination="j1C-2G-JU8" id="Rw9-B9-dFA"/>
+                        <outlet property="user" destination="TcQ-ad-ekH" id="gNO-Lf-hbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

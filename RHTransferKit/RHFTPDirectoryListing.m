@@ -7,20 +7,19 @@
 //
 
 #import "RHFTPDirectoryListing.h"
+#import "RHDownloadItem.h"
 
 #include <sys/socket.h>
 #include <sys/dirent.h>
 
 #include <CFNetwork/CFNetwork.h>
 
-#pragma mark * ListController
-
 @interface RHFTPDirectoryListing()
 @property(nonatomic,readonly) BOOL isReceiving;
 @property(nonatomic,retain) NSInputStream *networkStream;
 @property(nonatomic,retain) NSMutableData *listData;
 @property(nonatomic,copy) NSString *status;
-@property(nonatomic,retain) NSURL *url;
+@property(nonatomic,retain) RHDownloadItem *downloadItem;
 - (void)_updateStatus:(NSString *)statusString;
 - (void)closeConnection;
 @end
@@ -31,13 +30,13 @@
 @synthesize listData        = _listData;
 @synthesize listEntries     = _listEntries;
 @synthesize status          = _status;
-@synthesize url;
+@synthesize downloadItem    = _downloadItem;
 @synthesize delegate;
 
-- (id)initWithFtpUrl:(NSURL *)theUrl {
+- (id)initWithDownloadItem:(RHDownloadItem *)theDownloadItem {
 	self = [super init];
 	if (self != nil) {
-		url = [theUrl retain];
+		self.downloadItem = theDownloadItem;
 		
 		if (self.listEntries == nil) {
 			_listEntries = [[NSMutableDictionary alloc] init];
@@ -51,7 +50,6 @@
 	NSLog(@"Deallocating %@", self);
 	[self closeConnection];
 	delegate = nil;
-	[url release];
 	[_listData release];
 	[super dealloc];
 }
@@ -78,7 +76,6 @@
     // Clear the current image so that we get a nice visual cue if the receive fails.
     [self.listEntries removeAllObjects];
     [self _updateStatus:@"Receiving"];
-    //[[AppDelegate sharedAppDelegate] didStartNetworking];
 }
 
 - (void)_updateStatus:(NSString *)statusString
@@ -124,18 +121,14 @@
     CFReadStreamRef     ftpStream;
     
     assert(self.networkStream == nil);      // don't tap receive twice in a row!
-
-    // First get and check the URL.
-    
-    //url = [[AppDelegate sharedAppDelegate] smartURLForString:self.urlText.text];
-    //success = (url != nil);
-
-    // If the URL is bogus, let the user know.  Otherwise kick off the connection.
-    
 	
 	// Create the mutable data into which we will receive the listing.
 	self.listData = [NSMutableData data];
 	assert(self.listData != nil);
+	
+	// Get file size and last modification date using file's parent directory for URL
+	NSString *absURL = [self.downloadItem.remoteURL absoluteString];
+	NSURL *url = [NSURL URLWithString:[absURL substringToIndex:([absURL length] - [[[self.downloadItem.remoteURL absoluteString] lastPathComponent] length])]];
 	
 	// Open a CFFTPStream for the URL.
 	ftpStream = CFReadStreamCreateWithFTPURL(NULL, (CFURLRef) url);
@@ -158,10 +151,6 @@
 	
 	CFRunLoopRun();
 }
-
-//- (void)startReceive {
-//	[self performSelectorInBackground:@selector(_startReceive) withObject:nil];
-//}
 
 - (void)_stopReceiveWithStatus:(NSString *)statusString
     // Shuts down the connection and displays the result (statusString == nil) 
@@ -339,7 +328,6 @@
         }
         case NSStreamEventErrorOccurred: {
 			NSError *error = [stream streamError];
-			NSLog(@"URL: %@", self.url);
 			NSLog(@"NSStreamEventErrorOccurred: %@", [error localizedDescription]);
 			if ([delegate respondsToSelector:@selector(directoryListingDidFailToEstablishConnection:withError:)]) {
 				[delegate directoryListingDidFailToEstablishConnection:self withError:error];
@@ -355,43 +343,6 @@
 			break;
         }
     }
-}
-
-#pragma mark * Table view data source and delegate
-
-- (NSString *)_stringForNumber:(double)num asUnits:(NSString *)units
-{
-    NSString *  result;
-    double      fractional;
-    double      integral;
-    
-    fractional = modf(num, &integral);
-    if ( (fractional < 0.1) || (fractional > 0.9) ) {
-        result = [NSString stringWithFormat:@"%.0f %@", round(num), units];
-    } else {
-        result = [NSString stringWithFormat:@"%.1f %@", num, units];
-    }
-    return result;
-}
-
-- (NSString *)_stringForFileSize:(unsigned long long)fileSizeExact
-{
-    double  fileSize;
-    NSString *  result;
-    
-    fileSize = (double) fileSizeExact;
-    if (fileSizeExact == 1) {
-        result = @"1 byte";
-    } else if (fileSizeExact < 1024) {
-        result = [NSString stringWithFormat:@"%llu bytes", fileSizeExact];
-    } else if (fileSize < (1024.0 * 1024.0 * 0.1)) {
-        result = [self _stringForNumber:fileSize / 1024.0 asUnits:@"KB"];
-    } else if (fileSize < (1024.0 * 1024.0 * 1024.0 * 0.1)) {
-        result = [self _stringForNumber:fileSize / (1024.0 * 1024.0) asUnits:@"MB"];
-    } else {
-        result = [self _stringForNumber:fileSize / (1024.0 * 1024.0 * 1024.0) asUnits:@"MB"];
-    }
-    return result;
 }
 
 @end

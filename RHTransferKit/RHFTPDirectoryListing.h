@@ -10,26 +10,22 @@
 #import <UIKit/UIKit.h>
 
 @protocol RHFTPDirectoryListingDelegate;
+@class RHDownloadItem;
 
 @interface RHFTPDirectoryListing : NSObject<NSStreamDelegate> {
-    UITextField *_urlText;
-    UIActivityIndicatorView *_activityIndicator;
-    UITableView *_tableView;
-    UIBarButtonItem *_listOrCancelButton;
-    
     NSInputStream *_networkStream;
     NSMutableData *_listData;
     NSMutableDictionary *_listEntries;           // of NSDictionary as returned by CFFTPCreateParsedResourceListing
     NSString *_status;
 	
-	NSURL *url;
+	RHDownloadItem *_downloadItem;
 	id<RHFTPDirectoryListingDelegate> delegate;
 }
 
 @property(nonatomic,assign) id<RHFTPDirectoryListingDelegate> delegate;
 @property(nonatomic,retain) NSMutableDictionary *listEntries;
 
-- (id)initWithFtpUrl:(NSURL *)theUrl;
+- (id)initWithDownloadItem:(RHDownloadItem *)theDownloadItem;
 - (void)startReceive;
 
 @end

@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/rah71'
   s.platform     = :ios, '7.0'
   s.requires_arc = false
-  s.source_files = 'Pod/Classes/*.{h,c}', 'Pod/Classes/WebDAV/*.{h,c}'
+  s.source_files = 'RHTransferKit/*.{h,c}', 'RHTransferKit/WebDAV/*.{h,c}'
   s.frameworks = 'Foundation', 'UIKit'
 end

@@ -23,10 +23,12 @@
 #pragma mark -
 #pragma mark Life Cycle
 
-- (id)initWithLocalURL:(NSURL *)aLocalURL remoteURL:(NSURL *)aRemoteURL username:(NSString *)username password:(NSString *)password {
+- (id)initWithLocalURL:(NSURL *)aLocalURL remoteURL:(NSURL *)aRemoteURL username:(NSString *)theUsername password:(NSString *)thePassword {
 	if ((self = [self init])) {
 		self.localURL = aLocalURL;
 		self.remoteURL = aRemoteURL;
+		self.username = theUsername;
+		self.password = thePassword;
 	}
 	return self;
 }

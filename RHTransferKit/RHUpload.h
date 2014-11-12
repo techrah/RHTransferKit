@@ -52,8 +52,6 @@
 - (void)uploadClientDidBeginTransfer:(RHUpload *)client;
 - (void)uploadClientDidCloseConnection:(RHUpload *)client;
 - (void)uploadClient:(RHUpload *)client didSendBytes:(unsigned long long)bytesWritten;
-//- (void)uploadClientInitiatedResumeRequest:(RHUpload *)client;
-//- (void)setTotalSizeAndSizeUnitsForBytes:(unsigned long long)totalSizeInBytes;
 @end
 
 

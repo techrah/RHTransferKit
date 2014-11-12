@@ -163,18 +163,9 @@
 	else if (transferClient == ftpClient) {
 		if (self.contentLength == 0) {
 			// Get file size and last modification date using file's parent directory for URL
-			
-			NSString *absURL = [self.downloadItem.remoteURL absoluteString];
-			NSURL *ftpUrl = [NSURL URLWithString:[absURL substringToIndex:([absURL length] - [[[self.downloadItem.remoteURL absoluteString] lastPathComponent] length])]];
-			/*
-			NSString *absURLString = [self.downloadItem.remoteURL absoluteString];
-			NSRange range = [absURLString rangeOfString:@"/" options:NSLiteralSearch | NSBackwardsSearch];			
-			NSURL *ftpUrl = [NSURL URLWithString:[absURLString substringToIndex:range.location + 1]]; // include ending /
-			 */
-			self.ftpDL = [[[RHFTPDirectoryListing alloc] initWithFtpUrl:ftpUrl] autorelease];
+			self.ftpDL = [[RHFTPDirectoryListing alloc] initWithDownloadItem:self.downloadItem];
 			self.ftpDL.delegate = self;
 			[self.ftpDL startReceive];
-			// delegate callback message: directoryListingAvailable:
 		}
 		else
 			[transferClient downloadFileWithResume:shouldResume];

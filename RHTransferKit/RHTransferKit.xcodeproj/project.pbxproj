@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94DAAB321A1319FB00A2B5B5 /* RHDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAAB2A1A1319FB00A2B5B5 /* RHDownload.m */; };
+		94DAAB331A1319FB00A2B5B5 /* RHDownloadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAAB2C1A1319FB00A2B5B5 /* RHDownloadItem.m */; };
+		94DAAB341A1319FB00A2B5B5 /* RHFTPDirectoryListing.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAAB2F1A1319FB00A2B5B5 /* RHFTPDirectoryListing.m */; };
+		94DAAB351A1319FB00A2B5B5 /* RHFTPDownloadClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAAB311A1319FB00A2B5B5 /* RHFTPDownloadClient.m */; };
+		94DAAB381A131A0700A2B5B5 /* RHUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAAB371A131A0700A2B5B5 /* RHUpload.m */; };
+		94DAAB401A13253000A2B5B5 /* WTHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAAB3D1A131A0F00A2B5B5 /* WTHTTPConnection.m */; };
+		94DAAB411A13253200A2B5B5 /* WTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAAB3B1A131A0F00A2B5B5 /* WTClient.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		94DAAB0D1A1315B700A2B5B5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		94DAAB0F1A1315B700A2B5B5 /* libRHTransferKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRHTransferKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		94DAAB291A1319FB00A2B5B5 /* RHDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHDownload.h; sourceTree = SOURCE_ROOT; };
+		94DAAB2A1A1319FB00A2B5B5 /* RHDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHDownload.m; sourceTree = SOURCE_ROOT; };
+		94DAAB2B1A1319FB00A2B5B5 /* RHDownloadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHDownloadItem.h; sourceTree = SOURCE_ROOT; };
+		94DAAB2C1A1319FB00A2B5B5 /* RHDownloadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHDownloadItem.m; sourceTree = SOURCE_ROOT; };
+		94DAAB2D1A1319FB00A2B5B5 /* RHDownloadTableViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHDownloadTableViewCellDelegate.h; sourceTree = SOURCE_ROOT; };
+		94DAAB2E1A1319FB00A2B5B5 /* RHFTPDirectoryListing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHFTPDirectoryListing.h; sourceTree = SOURCE_ROOT; };
+		94DAAB2F1A1319FB00A2B5B5 /* RHFTPDirectoryListing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHFTPDirectoryListing.m; sourceTree = SOURCE_ROOT; };
+		94DAAB301A1319FB00A2B5B5 /* RHFTPDownloadClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHFTPDownloadClient.h; sourceTree = SOURCE_ROOT; };
+		94DAAB311A1319FB00A2B5B5 /* RHFTPDownloadClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHFTPDownloadClient.m; sourceTree = SOURCE_ROOT; };
+		94DAAB361A131A0700A2B5B5 /* RHUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHUpload.h; sourceTree = SOURCE_ROOT; };
+		94DAAB371A131A0700A2B5B5 /* RHUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHUpload.m; sourceTree = SOURCE_ROOT; };
+		94DAAB3A1A131A0F00A2B5B5 /* WTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTClient.h; sourceTree = "<group>"; };
+		94DAAB3B1A131A0F00A2B5B5 /* WTClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTClient.m; sourceTree = "<group>"; };
+		94DAAB3C1A131A0F00A2B5B5 /* WTHTTPConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTHTTPConnection.h; sourceTree = "<group>"; };
+		94DAAB3D1A131A0F00A2B5B5 /* WTHTTPConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTHTTPConnection.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94DAAB0C1A1315B700A2B5B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94DAAB061A1315B700A2B5B5 = {
+			isa = PBXGroup;
+			children = (
+				94DAAB111A1315B700A2B5B5 /* RHTransferKit */,
+				94DAAB101A1315B700A2B5B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94DAAB101A1315B700A2B5B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94DAAB0F1A1315B700A2B5B5 /* libRHTransferKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94DAAB111A1315B700A2B5B5 /* RHTransferKit */ = {
+			isa = PBXGroup;
+			children = (
+				94DAAB291A1319FB00A2B5B5 /* RHDownload.h */,
+				94DAAB2A1A1319FB00A2B5B5 /* RHDownload.m */,
+				94DAAB2B1A1319FB00A2B5B5 /* RHDownloadItem.h */,
+				94DAAB2C1A1319FB00A2B5B5 /* RHDownloadItem.m */,
+				94DAAB2D1A1319FB00A2B5B5 /* RHDownloadTableViewCellDelegate.h */,
+				94DAAB2E1A1319FB00A2B5B5 /* RHFTPDirectoryListing.h */,
+				94DAAB2F1A1319FB00A2B5B5 /* RHFTPDirectoryListing.m */,
+				94DAAB301A1319FB00A2B5B5 /* RHFTPDownloadClient.h */,
+				94DAAB311A1319FB00A2B5B5 /* RHFTPDownloadClient.m */,
+				94DAAB361A131A0700A2B5B5 /* RHUpload.h */,
+				94DAAB371A131A0700A2B5B5 /* RHUpload.m */,
+				94DAAB391A131A0F00A2B5B5 /* WebDAV */,
+			);
+			path = RHTransferKit;
+			sourceTree = "<group>";
+		};
+		94DAAB391A131A0F00A2B5B5 /* WebDAV */ = {
+			isa = PBXGroup;
+			children = (
+				94DAAB3A1A131A0F00A2B5B5 /* WTClient.h */,
+				94DAAB3B1A131A0F00A2B5B5 /* WTClient.m */,
+				94DAAB3C1A131A0F00A2B5B5 /* WTHTTPConnection.h */,
+				94DAAB3D1A131A0F00A2B5B5 /* WTHTTPConnection.m */,
+			);
+			path = WebDAV;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94DAAB0E1A1315B700A2B5B5 /* RHTransferKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94DAAB231A1315B700A2B5B5 /* Build configuration list for PBXNativeTarget "RHTransferKit" */;
+			buildPhases = (
+				94DAAB0B1A1315B700A2B5B5 /* Sources */,
+				94DAAB0C1A1315B700A2B5B5 /* Frameworks */,
+				94DAAB0D1A1315B700A2B5B5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RHTransferKit;
+			productName = RHTransferKit;
+			productReference = 94DAAB0F1A1315B700A2B5B5 /* libRHTransferKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94DAAB071A1315B700A2B5B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Murage Inc.";
+				TargetAttributes = {
+					94DAAB0E1A1315B700A2B5B5 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 94DAAB0A1A1315B700A2B5B5 /* Build configuration list for PBXProject "RHTransferKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 94DAAB061A1315B700A2B5B5;
+			productRefGroup = 94DAAB101A1315B700A2B5B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94DAAB0E1A1315B700A2B5B5 /* RHTransferKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94DAAB0B1A1315B700A2B5B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DAAB401A13253000A2B5B5 /* WTHTTPConnection.m in Sources */,
+				94DAAB331A1319FB00A2B5B5 /* RHDownloadItem.m in Sources */,
+				94DAAB341A1319FB00A2B5B5 /* RHFTPDirectoryListing.m in Sources */,
+				94DAAB411A13253200A2B5B5 /* WTClient.m in Sources */,
+				94DAAB321A1319FB00A2B5B5 /* RHDownload.m in Sources */,
+				94DAAB351A1319FB00A2B5B5 /* RHFTPDownloadClient.m in Sources */,
+				94DAAB381A131A0700A2B5B5 /* RHUpload.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		94DAAB211A1315B700A2B5B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		94DAAB221A1315B700A2B5B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94DAAB241A1315B700A2B5B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		94DAAB251A1315B700A2B5B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94DAAB0A1A1315B700A2B5B5 /* Build configuration list for PBXProject "RHTransferKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94DAAB211A1315B700A2B5B5 /* Debug */,
+				94DAAB221A1315B700A2B5B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94DAAB231A1315B700A2B5B5 /* Build configuration list for PBXNativeTarget "RHTransferKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94DAAB241A1315B700A2B5B5 /* Debug */,
+				94DAAB251A1315B700A2B5B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94DAAB071A1315B700A2B5B5 /* Project object */;
+}
