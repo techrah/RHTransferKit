@@ -279,11 +279,6 @@
 	}	
 }
 
-//- (void)setDecompressionObject:(id)object selector:(SEL)selector {
-//	decompressionObject = object;
-//	decompressionSelector = selector;
-//}
-
 #pragma mark -
 #pragma mark RHFTPDownloadClientDelegate
 
@@ -302,14 +297,8 @@
 	assert(contentLengthNumber);
 	#endif
 	
-	if (contentLengthNumber) {
+	if (contentLengthNumber)
 		contentLength = [contentLengthNumber unsignedLongLongValue];
-		/*
-		if ([viewDelegate respondsToSelector:@selector(setTotalSizeAndSizeUnitsForBytes:)]) {
-			[viewDelegate setTotalSizeAndSizeUnitsForBytes:contentLength];
-		}
-		 */
-	}
 	
 	if (self.oldDate) {
 		NSDate *lastModifiedDate = [listingDict objectForKey:(id)kCFFTPResourceModDate];
@@ -319,12 +308,10 @@
 			// don't download, just signal finished
 			self.downloadStatus = RHDownloadStatusDownloadSkipped;
 			[self transferClientDidSkipTransfer:transferClient];
-			//[directoryListing release];
 			return;
 		}
 	}
 	
-	//[directoryListing release];
 	[transferClient downloadFileWithResume:shouldResume];
 }
 
@@ -371,7 +358,6 @@
 }
 
 - (void)transferClientDidLoseConnection:(id)client withError:(NSError *)theError {
-	//[[iCEDAppDelegate appDelegate] didStopNetworkingConnection];
 	// In the event there was an open connection, this class instance would have already
 	// received the transferClientDidCloseConnection: message before getting to this point.
 	
@@ -500,11 +486,6 @@
 	{
 		if ([[[client properties] valueForKey:@"status"] isEqualToString:@"HTTP/1.1 200 OK"]) {
 			contentLength = (unsigned long long)[(NSString *)[[client properties] valueForKey:@"getcontentlength"] longLongValue];
-			/*
-			if ([viewDelegate respondsToSelector:@selector(setTotalSizeAndSizeUnitsForBytes:)]) {
-				[viewDelegate setTotalSizeAndSizeUnitsForBytes:contentLength];
-			}			
-			*/
 			
 			if (self.oldDate) {
 				NSString *getlastmodified = [[client properties] valueForKey:@"getlastmodified"];

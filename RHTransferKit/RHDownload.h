@@ -107,7 +107,6 @@ typedef NSUInteger RHDownloadStatus;
 - (void)downloadFileWithResume;
 - (void)stopTransfer;
 
-//- (void)setDecompressionObject:(id)object selector:(SEL)selector;
 @end
 
 
@@ -128,7 +127,6 @@ typedef NSUInteger RHDownloadStatus;
 - (void)downloadClientDidCloseConnection:(RHDownload *)client;
 - (void)downloadClient:(RHDownload *)client didReceiveBytes:(unsigned long long)bytesWritten;
 - (void)downloadClientInitiatedResumeRequest:(RHDownload *)download;
-//- (void)setTotalSizeAndSizeUnitsForBytes:(unsigned long long)totalSizeInBytes;
 @end
 
 
