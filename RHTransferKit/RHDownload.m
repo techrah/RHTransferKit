@@ -188,6 +188,9 @@
 #pragma mark Public methods
 
 - (void)downloadFile {	
+	// Reset in case this RHDownload instance is reused. This affects logic in startTransfer.
+	contentLength = 0;
+	
 	// iOS4: Let OS know this task should continue in background if necessary
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 40000
 	if (backgroundSupported) {
